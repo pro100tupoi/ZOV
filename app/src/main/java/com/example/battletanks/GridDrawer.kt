@@ -17,7 +17,7 @@ class GridDrawer(private val context: Context) {
         while(topMargin<=container!!.height){
             val horizontalLine=View(context)
             val layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,1)
-            topMargin +=50
+            topMargin +=CELL_SIZE
             layoutParams.topMargin=topMargin
             horizontalLine.layoutParams=layoutParams
             horizontalLine.setBackgroundColor(Color.WHITE)
@@ -30,7 +30,7 @@ class GridDrawer(private val context: Context) {
         while(leftMargin<=container!!.width){
             val verticalLine=View(context)
             val layoutParams = FrameLayout.LayoutParams(1,FrameLayout.LayoutParams.MATCH_PARENT)
-            leftMargin +=50
+            leftMargin +=CELL_SIZE
             layoutParams.leftMargin=leftMargin
             verticalLine.layoutParams=layoutParams
             verticalLine.setBackgroundColor(Color.WHITE)
